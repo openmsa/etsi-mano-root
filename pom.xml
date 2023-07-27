@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ubiqube.mano</groupId>
+		<artifactId>mano-super-pom</artifactId>
+		<version>3.1.0-SNAPSHOT</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<artifactId>etsi-root-aggregator</artifactId>
+	<packaging>pom</packaging>
+	<description>Build document for ETSI-MANO root</description>
+	<modules>
+		<module>etsi-mano-alarm</module>
+		<module>etsi-mano-auth</module>
+		<module>etsi-mano-config</module>
+		<module>etsi-mano-data-model</module>
+		<module>etsi-mano-docker</module>
+		<module>etsi-mano-em</module>
+		<module>etsi-mano-event</module>
+		<module>etsi-mano-fluxrest</module>
+		<module>etsi-mano-front-controllers</module>
+		<module>etsi-mano-grammar</module>
+		<module>etsi-mano-model</module>
+		<module>etsi-mano-monitoring</module>
+		<module>etsi-mano-orchestration</module>
+		<module>etsi-mano-package-parser</module>
+		<module>etsi-mano-pkg</module>
+		<module>etsi-mano-pom</module>
+		<module>etsi-mano-repo</module>
+		<module>etsi-mano-vim</module>
+	</modules>
+	<scm>
+		<developerConnection>scm:git:https://github.com/openmsa/etsi-mano-root.git</developerConnection>
+		<tag>HEAD</tag>
+  </scm>
+</project>
