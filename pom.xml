@@ -21,6 +21,7 @@
 		<module>etsi-mano-fluxrest</module>
 		<module>etsi-mano-front-controllers</module>
 		<module>etsi-mano-grammar</module>
+		<module>etsi-mano-java</module>
 		<module>etsi-mano-model</module>
 		<module>etsi-mano-monitoring</module>
 		<module>etsi-mano-orchestration</module>
