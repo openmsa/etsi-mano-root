@@ -1,2 +1,7 @@
 *.swp
 etsi-mano-*/
+
+.project
+.settings/
+.vscode/
+.idea/
