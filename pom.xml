@@ -15,6 +15,7 @@
 		<module>etsi-mano-auth</module>
 		<module>etsi-mano-config</module>
 		<module>etsi-mano-data-model</module>
+		<module>etsi-mano-data-model-small</module>
 		<module>etsi-mano-docker</module>
 		<module>etsi-mano-em</module>
 		<module>etsi-mano-event</module>
