@@ -16,6 +16,6 @@ for repo in etsi-mano-alarm etsi-mano-auth etsi-mano-config etsi-mano-data-model
 do
 	if [ ! -d $repo ]
 	then
-		git clone git@github.com:openmsa/$repo
+		git clone $1/$repo
 	fi
 done
