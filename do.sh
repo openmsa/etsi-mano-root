@@ -39,6 +39,29 @@ COMPLETED=0
 ##  FUNCTIONS
 ##
 
+usage() {
+    echo "Usage: $0 <git_command> [arguments]"
+    echo
+    echo "This script runs a specified git command across all directories"
+    echo "in the current directory that match the pattern 'etsi-*'."
+    echo "The main process will spawn a child for each subdirectory found"
+    echo "to parallelize the execution of the git command."
+    echo
+    echo "Valid git commands are:"
+    for cmd in "${VALID_GIT_COMMANDS[@]}"; do
+        echo "  - $cmd"
+    done
+    echo
+    echo "Examples:"
+    echo "  $0 status"
+    echo "  $0 fetch --all"
+    echo "  $0 grep 'some_pattern'"
+    echo
+    echo "Options:"
+    echo "  -h, --help    Display this help message and exit"
+    exit 1
+}
+
 count_completed_git_task() {
     # Reset nb of completed as we count all of them each time
     COMPLETED=0
@@ -109,14 +132,24 @@ show_result_and_cleanup() {
 ##  MAIN
 ##
 
-if [ -z "$*" ]; then
-    echo "No git command provided"
-    exit 1
+# Always cleanup
+trap show_result_and_cleanup EXIT
+
+# Check for help option
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    usage
 fi
 
+# Check no arg at all
+if [ -z "$*" ]; then
+    echo "No argument provided"
+    usage
+fi
+
+# Check arg is among valid git command
 if [[ ! " ${VALID_GIT_COMMANDS[@]} " =~ " ${GIT_SUBCOMMAND} " ]]; then
     echo "Invalid git command: $GIT_SUBCOMMAND"
-    exit 1
+    usage
 fi
 
 # MAIN: execute the git cmd over all directories
@@ -130,7 +163,5 @@ wait
 
 # Kill the progress icon process
 kill $progress_pid 2>"$DEV_NULL"
-
-show_result_and_cleanup
 
 exit 0
