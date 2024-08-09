@@ -33,7 +33,7 @@
 		<module>etsi-mano-vim</module>
 	</modules>
 	<scm>
-		<developerConnection>scm:git:https://github.com/openmsa/etsi-mano-root.git</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com/openmsa/etsi-mano-root.git</developerConnection>
 		<tag>HEAD</tag>
   </scm>
 </project>
