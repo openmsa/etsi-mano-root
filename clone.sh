@@ -12,7 +12,7 @@ then
 	echo -e "    \033[37;1;1m./do.sh git remote ...\033[0m"
 	exit 1
 fi
-for repo in etsi-mano-alarm etsi-mano-auth etsi-mano-config etsi-mano-data-model etsi-mano-docker etsi-mano-em etsi-mano-event etsi-mano-fluxrest etsi-mano-front-controllers etsi-mano-grammar etsi-mano-model etsi-mano-monitoring etsi-mano-orchestration etsi-mano-package-parser etsi-mano-pkg etsi-mano-pom etsi-mano-repo etsi-mano-vim etsi-mano-java etsi-mano-data-model-small
+for repo in etsi-mano-alarm etsi-mano-auth etsi-mano-config etsi-mano-data-model etsi-mano-docker etsi-mano-em etsi-mano-event etsi-mano-fluxrest etsi-mano-front-controllers etsi-mano-grammar etsi-mano-model etsi-mano-monitoring etsi-mano-orchestration etsi-mano-package-parser etsi-mano-pkg etsi-mano-pom etsi-mano-repo etsi-mano-vim etsi-mano-java etsi-mano-data-model-small etsi-mano-db-update
 do
 	if [ ! -d $repo ]
 	then
